@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32002.185
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Rest and Web Helper", "0 - Rest and Web Helper", "{F2D1B6B5-1403-4B36-8E2C-5CD41C6F3F04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infra", "5 - Infra", "{C6E292E7-72FD-4BBA-9FBC-631FF1EDE4CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{DFA5D1EE-1A0C-42E7-93E8-719F687169B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{26259541-6B97-4683-BAC7-AAA8042B55A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Services", "3 - Services", "{90039C38-51B7-4F22-ABF0-46AFC102B8B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Repository", "4 - Repository", "{D225DA3B-BCA8-4929-A76B-2C888B9A4834}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DietCode.PublicServices.CoreServices", "DietCode.PublicServices.CoreServices\DietCode.PublicServices.CoreServices.csproj", "{12EE4392-E461-46F3-A3B0-27BCF95EA4FE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DietCode.PublicServices.Ioc", "DietCode.PublicServices.Ioc\DietCode.PublicServices.Ioc.csproj", "{144CD43B-AD6C-49F5-9FB9-503E771B523C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DietCode.PublicServices.Domain", "DietCode.PublicServices.Domain\DietCode.PublicServices.Domain.csproj", "{530831C6-5AC3-4B8B-ADD3-1C5EF9C94A2A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DietCode.PublicServices.App", "DietCode.PublicServices.App\DietCode.PublicServices.App.csproj", "{23CC1E2E-E74D-4C85-9B1E-A0163A946FAD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DietCode.PublicServices.ViewModel", "DietCode.PublicServices.ViewModel\DietCode.PublicServices.ViewModel.csproj", "{30983A20-934A-48CB-86C1-E46E4B7D0022}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DietCode.PublicServices.Api", "DietCode.PublicServices.Api\DietCode.PublicServices.Api.csproj", "{F2643A16-3EC8-47D6-81B3-462B0FE38B46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12EE4392-E461-46F3-A3B0-27BCF95EA4FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12EE4392-E461-46F3-A3B0-27BCF95EA4FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12EE4392-E461-46F3-A3B0-27BCF95EA4FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12EE4392-E461-46F3-A3B0-27BCF95EA4FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{144CD43B-AD6C-49F5-9FB9-503E771B523C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{144CD43B-AD6C-49F5-9FB9-503E771B523C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{144CD43B-AD6C-49F5-9FB9-503E771B523C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{144CD43B-AD6C-49F5-9FB9-503E771B523C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{530831C6-5AC3-4B8B-ADD3-1C5EF9C94A2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{530831C6-5AC3-4B8B-ADD3-1C5EF9C94A2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{530831C6-5AC3-4B8B-ADD3-1C5EF9C94A2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{530831C6-5AC3-4B8B-ADD3-1C5EF9C94A2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23CC1E2E-E74D-4C85-9B1E-A0163A946FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23CC1E2E-E74D-4C85-9B1E-A0163A946FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23CC1E2E-E74D-4C85-9B1E-A0163A946FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23CC1E2E-E74D-4C85-9B1E-A0163A946FAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30983A20-934A-48CB-86C1-E46E4B7D0022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30983A20-934A-48CB-86C1-E46E4B7D0022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30983A20-934A-48CB-86C1-E46E4B7D0022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30983A20-934A-48CB-86C1-E46E4B7D0022}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2643A16-3EC8-47D6-81B3-462B0FE38B46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2643A16-3EC8-47D6-81B3-462B0FE38B46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2643A16-3EC8-47D6-81B3-462B0FE38B46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2643A16-3EC8-47D6-81B3-462B0FE38B46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{12EE4392-E461-46F3-A3B0-27BCF95EA4FE} = {90039C38-51B7-4F22-ABF0-46AFC102B8B1}
+		{144CD43B-AD6C-49F5-9FB9-503E771B523C} = {C6E292E7-72FD-4BBA-9FBC-631FF1EDE4CD}
+		{530831C6-5AC3-4B8B-ADD3-1C5EF9C94A2A} = {26259541-6B97-4683-BAC7-AAA8042B55A5}
+		{23CC1E2E-E74D-4C85-9B1E-A0163A946FAD} = {DFA5D1EE-1A0C-42E7-93E8-719F687169B8}
+		{30983A20-934A-48CB-86C1-E46E4B7D0022} = {DFA5D1EE-1A0C-42E7-93E8-719F687169B8}
+		{F2643A16-3EC8-47D6-81B3-462B0FE38B46} = {F2D1B6B5-1403-4B36-8E2C-5CD41C6F3F04}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5516FA09-4E10-4B7C-9960-EBEE5576BAC1}
+	EndGlobalSection
+EndGlobal
