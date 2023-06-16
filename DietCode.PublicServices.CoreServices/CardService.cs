@@ -100,6 +100,75 @@ namespace DietCode.PublicServices.CoreServices
             return await IsValidLuhnn(card);
 
         }
-        #endregion    
+        #endregion
+
+        #region Gerar Cartao
+
+        public async Task<string> GerarNumeroCartaoCreditoAsync(string bandeira)
+        {
+            Random random = new Random();
+            string numeroCartao = "";
+
+            switch (bandeira)
+            {
+                case "Visa":
+                    numeroCartao += "4";
+                    for (int i = 0; i < 15; i++)
+                    {
+                        int digito = random.Next(0, 10);
+                        numeroCartao += digito.ToString();
+                    }
+                    break;
+                case "Mastercard":
+                    numeroCartao += "5";
+                    int segundoDigito = random.Next(1, 6);
+                    numeroCartao += segundoDigito.ToString();
+                    for (int i = 0; i < 13; i++)
+                    {
+                        int digito = random.Next(0, 10);
+                        numeroCartao += digito.ToString();
+                    }
+                    break;
+                // Adicione outros casos para bandeiras adicionais
+                default:
+                    throw new ArgumentException("Bandeira de cartão inválida");
+            }
+
+            int digitoVerificador = await CalcularDigitoVerificadorAsync(numeroCartao);
+            numeroCartao += digitoVerificador.ToString();
+
+            return numeroCartao;
+        }
+
+        public async Task<int> CalcularDigitoVerificadorAsync(string numeroCartao)
+        {
+            int soma = 0;
+            bool dobrar = false;
+
+            for (int i = numeroCartao.Length - 1; i >= 0; i--)
+            {
+                int digito = int.Parse(numeroCartao[i].ToString());
+
+                if (dobrar)
+                {
+                    digito *= 2;
+
+                    if (digito > 9)
+                        digito -= 9;
+                }
+
+                soma += digito;
+                dobrar = !dobrar;
+            }
+
+            int digitoVerificador = (10 - (soma % 10)) % 10;
+
+            // Simulando uma operação assíncrona com Task.Delay
+            await Task.Delay(100);
+
+            return digitoVerificador;
+        }
+
+        #endregion
     }
 }
