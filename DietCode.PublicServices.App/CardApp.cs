@@ -12,11 +12,11 @@ using System.Threading.Tasks;
 namespace FluxoDeCaixa.App
 {
 
-    public class ValidatorApp : AppServiceBase, IValidatorApp
+    public class CardApp : AppServiceBase, ICardApp
     {
-        private readonly IValidatorService service;
+        private readonly ICardService service;
 
-        public ValidatorApp(IValidatorService service) : base()
+        public CardApp(ICardService service) : base()
         {
             this.service = service;
         }
@@ -34,16 +34,5 @@ namespace FluxoDeCaixa.App
 
         }
 
-        public async Task<MethodResult> ValidarCnpj(string cnpj)
-        {
-            var serviceResult = await service.ValidarCnpj(cnpj);
-            return Ok(serviceResult);
-        }
-
-        public async Task<MethodResult> ValidarCpf(string cpf)
-        {
-            var serviceResult = await service.ValidarCpf(cpf);
-            return Ok(serviceResult);
-        }
     }
 }

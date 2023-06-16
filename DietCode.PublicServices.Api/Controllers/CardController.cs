@@ -13,11 +13,11 @@ namespace DietCode.PublicServices.Api.Controllers
     [ApiController]
     public class CardController : ControllerBase
     {
-        protected readonly IValidatorApp validator;
+        protected readonly ICardApp cardApp;
 
-        public CardController(IValidatorApp validator)
+        public CardController(ICardApp validator)
         {
-            this.validator = validator;
+            this.cardApp = validator;
         }
 
 
@@ -30,7 +30,7 @@ namespace DietCode.PublicServices.Api.Controllers
         [SwaggerOperation(Summary = "Valida a Bandeira")]
         public async Task<IActionResult> ValidaBandeira(string card)
         {
-            var retorno = await validator.ValidaBandeira(card);
+            var retorno = await cardApp.ValidaBandeira(card);
             return Ok(retorno);
         }
 
@@ -43,7 +43,7 @@ namespace DietCode.PublicServices.Api.Controllers
         [SwaggerOperation(Summary = "Valida o Cartão")]
         public async Task<IActionResult> IsValidCreditCardNumber(string card)
         {
-            var retorno = await validator.IsValidCreditCardNumber(card);
+            var retorno = await cardApp.IsValidCreditCardNumber(card);
             return Ok(retorno);
         }
     }

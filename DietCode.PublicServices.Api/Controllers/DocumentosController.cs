@@ -1,10 +1,5 @@
-﻿using DietCode.PublicServices.Domain.Interfaces.Services;
-using Microsoft.AspNetCore.Http;
+﻿using DietCode.PublicServices.ViewModel.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace DietCode.PublicServices.Api.Controllers
 {
@@ -12,23 +7,23 @@ namespace DietCode.PublicServices.Api.Controllers
     [ApiController]
     public class DocumentosController : ControllerBase
     {
-        public readonly IDocGeneratoratorApp docGeneratoratorApp;
-        public DocumentosController(IDocGeneratoratorApp docGeneratoratorApp)
+        public readonly IDocumentApp docGeneratoratorApp;
+        public DocumentosController(IDocumentApp docGeneratoratorApp)
         {
             this.docGeneratoratorApp = docGeneratoratorApp;
         }
 
-        [HttpGet("Gerar/CPF")]
-        public async Task<IActionResult> GerarCPF()
+        [HttpGet("Gerar/CPF/{formatado}")]
+        public async Task<IActionResult> GerarCPF(bool formatado = false)
         {
-            var result = await docGeneratoratorApp.GerarCPF();
+            var result = await docGeneratoratorApp.GerarCPF(formatado);
             return Ok(result);
         }
 
-        [HttpGet("Gerar/CNPJ")]
-        public async Task<IActionResult> GerarCNPJ()
+        [HttpGet("Gerar/CNPJ/{formatado}")]
+        public async Task<IActionResult> GerarCNPJ(bool formatado = false)
         {
-            var result = await docGeneratoratorApp.GerarCNPJ();
+            var result = await docGeneratoratorApp.GerarCNPJ(formatado);
             return Ok(result);
         }
     }

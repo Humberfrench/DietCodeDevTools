@@ -13,8 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DietCode.PublicServices.App\DietCode.PublicServices.App.csproj" />
     <ProjectReference Include="..\DietCode.PublicServices.CoreServices\DietCode.PublicServices.CoreServices.csproj" />
     <ProjectReference Include="..\DietCode.PublicServices.Domain\DietCode.PublicServices.Domain.csproj" />
+    <ProjectReference Include="..\DietCode.PublicServices.ViewModel\DietCode.PublicServices.ViewModel.csproj" />
   </ItemGroup>
 
 </Project>

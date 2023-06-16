@@ -14,9 +14,9 @@ namespace DietCode.PublicServices.Api.Controllers
     [ApiController]
     public class ValidatorsController : ControllerBase
     {
-        protected readonly IValidatorApp validator;
+        protected readonly IDocumentApp validator;
 
-        public ValidatorsController(IValidatorApp validator)
+        public ValidatorsController(IDocumentApp validator)
         {
             this.validator = validator;
         }

@@ -1,12 +1,9 @@
-﻿
-using Dietcode.Api.Core.Results;
+﻿using Dietcode.Api.Core.Results;
 
 namespace DietCode.PublicServices.ViewModel.Interfaces
 {
-    public interface IValidatorApp
+    public interface ICardApp
     {
-        Task<MethodResult> ValidarCpf(string cpf);
-        Task<MethodResult> ValidarCnpj(string cnpj);
         Task<MethodResult> ValidaBandeira(string card);
         Task<MethodResult> IsValidCreditCardNumber(string card);
     }

@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace DietCode.PublicServices.Domain.Interfaces.Services
 {
-    public interface IValidatorService
+    public interface ICardService
     {
-        Task<bool> ValidarCpf(string cpf);
-        Task<bool> ValidarCnpj(string cnpj);
         Task<string> ValidaBandeira(string card);
         Task<bool> IsValidCreditCardNumber(string cc);
     }
